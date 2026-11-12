@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elokuvan tiedot</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .details {
+      min-height: 85vh;
+      padding: 7%;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .details img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .info {
+      max-width: 600px;
+    }
+
+    .info h1 {
+      font-size: 45px;
+      margin: 20px 0;
+    }
+
+    .info p {
+      color: #ccc;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="logo">NETFLIX</h1>
+  <nav>
+    <a href="index.html">Etusivu</a>
+  </nav>
+</header>
+
+<section class="details" id="details"></section>
+
+<script src="script.js"></script>
+<script>
+  const id = Number(new URLSearchParams(location.search).get("id"));
+  const movie = movies.find(m => m.id === id);
+  const details = document.getElementById("details");
+
+  if (movie) {
+    document.title = movie.title;
+
+    details.innerHTML = `
+      <img src="${movie.image}" alt="${movie.title}">
+      <div class="info">
+        <span class="tag">ELOKUVA</span>
+        <h1>${movie.title}</h1>
+        <p>${movie.year} · ${movie.genre}</p>
+        <p>⭐ Arvosana: ${movie.rating}</p>
+        <p>${movie.description}</p>
+        <button onclick="location.href='index.html'">
+          ← Takaisin elokuviin
+        </button>
+      </div>
+    `;
+  } else {
+    details.innerHTML = "<h2>Elokuvaa ei löytynyt.</h2>";
+  }
+</script>
+
+</body>
+</html>
