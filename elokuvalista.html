@@ -2,35 +2,65 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NETFLIX | Elokuvat</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutustu elokuviin ja löydä suosikkisi.">
+    <title>NETFLIX | Etusivu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<header>
-  <h1 class="logo">NETFLIX</h1>
-  <nav>
-    <a href="index.html">Etusivu</a>
-    <a href="#movies">Elokuvat</a>
-  </nav>
-</header>
+    <header>
+        <h1 class="logo">NETFLIX</h1>
 
-<section class="hero">
-  <div class="hero-content">
-    <span class="tag">SUOSITELTU</span>
-    <h2>INTERSTELLAR</h2>
-    <p>Ihmiskunnan tulevaisuus on tähtien takana.</p>
-    <button onclick="openMovie(1)">▶ Katso tiedot</button>
-  </div>
-</section>
+        <nav aria-label="Päänavigaatio">
+            <a href="index.html" aria-current="page">Etusivu</a>
+            <a href="movies.html">Elokuvat</a>
+            <a href="favorites.html">Suosikit</a>
+        </nav>
+    </header>
 
-<main id="movies">
-  <h2>Suositut elokuvat</h2>
-  <div class="movie-grid" id="movieGrid"></div>
-</main>
+    <main>
 
-<script src="script.js"></script>
+        <section class="hero">
+            <div class="hero-content">
+
+                <span class="tag">SUOSITELTU</span>
+
+                <h2>INTERSTELLAR</h2>
+
+                <p>
+                    Ihmiskunnan tulevaisuus on tähtien takana.
+                    Tutustu yhteen kaikkien aikojen suosituimmista
+                    tieteiselokuvista.
+                </p>
+
+                <a href="movie.html?id=1" class="button">
+                    Katso tiedot
+                </a>
+
+            </div>
+        </section>
+
+        <section class="movies-section" aria-labelledby="popular-title">
+
+            <h2 id="popular-title">Suositut elokuvat</h2>
+
+            <div class="movie-grid" id="movieGrid">
+
+                <!-- JavaScript hakee elokuvat tähän -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>NETFLIX-elokuvasovellus © 2026</p>
+    </footer>
+
 </body>
 </html>

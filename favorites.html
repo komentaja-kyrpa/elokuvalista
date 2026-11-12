@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katso omat suosikkielokuvasi.">
+    <title>NETFLIX | Suosikit</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">NETFLIX</h1>
+
+        <nav aria-label="Päänavigaatio">
+            <a href="index.html">Etusivu</a>
+            <a href="movies.html">Elokuvat</a>
+            <a href="favorites.html" aria-current="page">Suosikit</a>
+        </nav>
+    </header>
+
+    <main class="movies-page">
+
+        <section class="page-heading">
+            <h2>Omat suosikit</h2>
+
+            <p>
+                Täältä löydät suosikkielokuvasi.
+                Voit lisätä ja poistaa elokuvia suosikeistasi.
+            </p>
+        </section>
+
+        <section class="movies-section" aria-labelledby="favorites-title">
+
+            <h2 id="favorites-title">Suosikkielokuvat</h2>
+
+            <div class="movie-grid" id="favoritesGrid">
+
+                <!-- Suosikkielokuvat näytetään JavaScriptillä -->
+
+            </div>
+
+            <p id="favoritesMessage" role="status" aria-live="polite">
+                Suosikkielokuvia ei ole vielä lisätty.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>NETFLIX-elokuvasovellus © 2026</p>
+    </footer>
+
+</body>
+</html>
