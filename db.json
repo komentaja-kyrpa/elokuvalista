@@ -8,21 +8,11 @@
       "rating": 8.8,
       "image": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
       "description": "Dom Cobb pystyy varastamaan salaisuuksia ihmisten unista. Nyt hän saa tehtävän, joka voi muuttaa kaiken.",
-      "favorite": false
-    },
-    {
-      "id": "3",
-      "title": "The Dark Knight",
-      "year": 2008,
-      "genre": "Toiminta",
-      "rating": 9,
-      "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-      "description": "Batman kohtaa Jokerin, jonka kaaos uhkaa koko Gotham Cityä.",
       "favorite": true
     },
     {
       "id": "6",
-      "title": "Dune",
+      "title": "ukuuu",
       "year": 2021,
       "genre": "Sci-Fi",
       "rating": 8,
